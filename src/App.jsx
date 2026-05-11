@@ -1,66 +1,28 @@
 import './App.css'
-import Header from './components/Header'
-import ProjectCard from './components/ProjectCard'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 
-import htmlCssScreenshot from './assets/shot1.png'
-import bookTrackerScreenshot from './assets/shot2.png'
-import typingGameScreenshot from './assets/shot3.png'
+import Home from './pages/Home'
+import About from './pages/About'
+import Portfolio from './pages/Portfolio'
 
 function App() {
   return (
-    <div className="page">
-      <Header />
+    <BrowserRouter>
+      <div className="page">
+        <Navbar />
 
-      <main>
-        <section className="intro">
-          <h2>My Projects</h2>
-          <p>
-            blabla
-          </p>
-        </section>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+        </Routes>
 
-        <section className="projects">
-          <ProjectCard
-            name="HTML and CSS Portfolio Page"
-            screenshot={htmlCssScreenshot}
-            githubRepo="https://github.com/smbirnbaum/fe-portfolio"
-            techUsed="HTML, CSS, Flexbox"
-            shortWriteUp="blabla"
-            whatItDoes="blabla"
-            whatILearned="blabla"
-            role="Solo project"
-            challengesSolved="blabla"
-          />
-
-          <ProjectCard
-            name="Book Tracker"
-            screenshot={bookTrackerScreenshot}
-            githubRepo="https://github.com/smbirnbaum/fe-portfolio"
-            techUsed="HTML, CSS, JavaScript"
-            shortWriteUp="blabla"
-            whatItDoes="blabla"
-            whatILearned="blabla"
-            role="Solo project"
-            challengesSolved="blabla"
-          />
-
-          <ProjectCard
-            name="Typing Game"
-            screenshot={typingGameScreenshot}
-            githubRepo="https://github.com/smbirnbaum/fe-portfolio"
-            techUsed="HTML, CSS, JavaScript, DOM"
-            shortWriteUp="blabla"
-            whatItDoes="blabla"
-            whatILearned="blabla"
-            role="Solo project"
-            challengesSolved="blabla"
-          />
-        </section>
-      </main>
-
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
   )
 }
 
