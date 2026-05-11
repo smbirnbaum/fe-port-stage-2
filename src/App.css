@@ -185,6 +185,12 @@ main {
   color: #f4c7ab;
 }
 
+.nav-links a:focus {
+  color: #f4c7ab;
+  outline: 2px solid #f4c7ab;
+  outline-offset: 4px;
+}
+
 .page-section {
   width: min(800px, 90%);
   margin: 0 auto;
