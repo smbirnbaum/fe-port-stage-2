@@ -6,12 +6,12 @@ function About() {
 
         <p>
           I am learning front-end development and practicing how to build websites with
-          HTML, CSS, Javascript, React, and reusable components.
+          HTML, CSS, JavaScript, React, and reusable components.
         </p>
 
         <p>
-          This project helped me practice creating pages, using React Router, and working
-          with state in React.
+          This portfolio project helped me practice page structure, React Router,
+          navigation, events, and useState.
         </p>
       </section>
     </main>
